@@ -1,4 +1,7 @@
 //var exec = require("child_process").exec;
+
+var py = require('python-shell');
+
 var querystring = require("querystring"), 
 	fs = require("fs"),
 	formidable = require("formidable"),
@@ -26,6 +29,15 @@ function home(response, postData) {
 }
 
 function parncutt(response, request) {
+	
+	var options = {
+	  mode: 'text',
+	  //pythonPath: 'path/to/python',
+	  //pythonOptions: ['-u'],
+	  scriptPath: 'dd/dactyler',
+	  //args: ['value1', 'value2', 'value3']
+	};
+	
 	console.log("Request handler 'parncutt' was called.");
 	var form = new formidable.IncomingForm();
 	//console.log("about to parse...");
@@ -37,8 +49,14 @@ function parncutt(response, request) {
 				fs.rename(files.upload.path, "/tmp/parncutt.txt");
 			}
 		});
+		py.run('parncutt.py', options, function (err) {
+			console.log("opening parncutt.py...");
+			if (err) throw err;
+			console.log('finished');
+		});
+		
 		response.writeHead(200, {"Content-Type": "text/html"});
-		//response.end(sys.inspect({fields: fields, files: files}));
+		response.end(sys.inspect({fields: fields, files: files}));
 		//fs.createReadStream("/tmp/submission.txt").pipe(response);
 		//response.end();
 	});
