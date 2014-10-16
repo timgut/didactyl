@@ -25,11 +25,11 @@ __author__ = 'David Randolph'
 # OTHER DEALINGS IN THE SOFTWARE.
 
 import music21
-import YenKSP
+#import YenKSP
 import util
 import corpus
 from node import GraphNode
-import YenKSP.algorithms
+#import YenKSP.algorithms
 import networkx as nx
 import copy
 import matplotlib.pyplot as plt
