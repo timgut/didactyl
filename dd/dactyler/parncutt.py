@@ -38,7 +38,8 @@ import pprint
 import time
 import re
 
-TEST_CORPUS = '/Users/w17626/dd/corpora/small.abc'
+TEST_CORPUS = '/Users/timgut/Projects/node.js/node-web-service/dd/corpora/parncutt.abc'
+#TEST_CORPUS = '/Users/w17626/dd/corpora/small.abc'
 THUMB = 1
 INDEX = 2
 MIDDLE = 3

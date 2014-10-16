@@ -15,7 +15,7 @@ function home(response, postData) {
 	"<meta http-equiv='Context-Type' content='text/html'; 'charset=UTF-8' />"  +
 	"</head>" +
 	"<body>" + 
-	"<form action='/parncutt' method='POST' enctype='multipart/form-data'>" +
+	"<form action='/hart' method='POST' enctype='multipart/form-data'>" +
 	"<input type='file' name='upload' multiple='multiple'>" +
 	"<input type='submit' value='Upload!' />" +
 	"</form>" +
@@ -63,11 +63,39 @@ function parncutt(response, request) {
 	
 }
 
-function hart(response) {
+function hart(response, request) {
+	
+	var options = {
+	  mode: 'text',
+	  //pythonPath: 'path/to/python',
+	  //pythonOptions: ['-u'],
+	  scriptPath: 'dd/dactyler',
+	  //args: ['value1', 'value2', 'value3']
+	};
+	
 	console.log("Request handler 'hart' was called.");
-	response.writeHead(200, {"Content-Type":"text/plain"});
-	response.write("You called hart!");
-	response.end();
+	var form = new formidable.IncomingForm();
+	//console.log("about to parse...");
+	form.parse(request, function(error, fields, files) {
+		//console.log("parsing done");
+		fs.rename(files.upload.path, "/tmp/hart.txt", function(error) {
+			if (error) {
+				fs.unlink("/tmp/hart.txt");
+				fs.rename(files.upload.path, "/tmp/hart.txt");
+			}
+		});
+		py.run('hart.py', options, function (err) {
+			console.log("opening hart.py...");
+			if (err) throw err;
+			console.log('finished');
+		});
+		
+		response.writeHead(200, {"Content-Type": "text/html"});
+		response.end(sys.inspect({fields: fields, files: files}));
+		//fs.createReadStream("/tmp/submission.txt").pipe(response);
+		//response.end();
+	});
+	
 }
 
 function show(response) {
