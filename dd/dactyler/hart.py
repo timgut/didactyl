@@ -33,8 +33,8 @@ BIG_NUM = 999
 MAX_INTERVAL_SIZE = 12
 BLACK = 1
 WHITE = 0
-COST_FILE = 'data/tables.dat'
-TEST_CORPUS = 'corpora/hart.abc'
+COST_FILE = 'dd/data/tables.dat'
+TEST_CORPUS = "/tmp/%s" % sys.argv[1]
 
 class Interval:
     def __init__(self, l_color, h_color, l_finger, h_finger, s):

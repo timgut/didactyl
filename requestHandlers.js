@@ -70,7 +70,7 @@ function hart(response, request) {
 	  //pythonPath: 'path/to/python',
 	  //pythonOptions: ['-u'],
 	  scriptPath: 'dd/dactyler',
-	  //args: ['value1', 'value2', 'value3']
+	  args: ['hart.abc']
 	};
 	
 	console.log("Request handler 'hart' was called.");
@@ -78,10 +78,10 @@ function hart(response, request) {
 	//console.log("about to parse...");
 	form.parse(request, function(error, fields, files) {
 		//console.log("parsing done");
-		fs.rename(files.upload.path, "/tmp/hart.txt", function(error) {
+		fs.rename(files.upload.path, "/tmp/hart.abc", function(error) {
 			if (error) {
-				fs.unlink("/tmp/hart.txt");
-				fs.rename(files.upload.path, "/tmp/hart.txt");
+				fs.unlink("/tmp/hart.abc");
+				fs.rename(files.upload.path, "/tmp/hart.abc");
 			}
 		});
 		py.run('hart.py', options, function (err) {

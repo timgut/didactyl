@@ -4,7 +4,7 @@ var requestHandlers = require("./requestHandlers");
 
 var handle = {};
 handle["/"] = requestHandlers.home;
-handle["/hart"] = requestHandlers.parncutt;
+handle["/parncutt"] = requestHandlers.parncutt;
 handle["/hart"] = requestHandlers.hart;
 handle["/show"] = requestHandlers.show;
 
