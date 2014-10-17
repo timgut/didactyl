@@ -16,7 +16,7 @@ function home(response, postData) {
 	"</head>\n" +
 	"<body>\n" + 
 	"<p>Please upload your .abc file and select the fingering method from the dropdown.</p>\n" + 
-	"<form action='/route_post' method='POST' enctype='multipart/form-data'>\n" +
+	"<form action='/fingering' method='POST' enctype='multipart/form-data'>\n" +
 	"\t<select name='f'><option value=''>Choose a fingering below</option>\n" +
 	"\t\t<option value='hart'>Hart</option>\n" +
 	"\t\t<option value='parncutt'>Parncutt</option>\n" +
@@ -33,9 +33,8 @@ function home(response, postData) {
 	
 }
 
-function route_post(response, request) {
+function fingering(response, request) {
 	
-	console.log("Request handler 'route_post' handling the request");
 	var form = new formidable.IncomingForm();
 	form.parse(request, function(error, fields, files) {
 		if (fields['f'] == 'hart') {
@@ -106,4 +105,4 @@ function route(response, request) {
 exports.home = home;
 exports.parncutt = parncutt;
 exports.hart = hart;
-exports.route_post = route_post;
+exports.fingering = fingering;

@@ -4,7 +4,7 @@ var requestHandlers = require("./requestHandlers");
 
 var handle = {};
 handle["/"] = requestHandlers.home;
-handle["/route_post"] = requestHandlers.route_post;
+handle["/fingering"] = requestHandlers.fingering;
 handle["/parncutt"] = requestHandlers.parncutt;
 handle["/hart"] = requestHandlers.hart;
 
