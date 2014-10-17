@@ -38,7 +38,7 @@ function route_post(response, request) {
 	console.log("Request handler 'route_post' handling the request");
 	var form = new formidable.IncomingForm();
 	form.parse(request, function(error, fields, files) {
-		if fields['f'] == 'hart' {
+		if (fields['f'] == 'hart') {
 			fs.rename(files.upload.path, "/tmp/hart.abc", function(error) {
 				if (error) {
 					fs.unlink("/tmp/hart.abc");
@@ -49,7 +49,7 @@ function route_post(response, request) {
 			hart(response, request);
 			
 		}
-		else if fields['f'] == 'parncutt' {
+		else if (fields['f'] == 'parncutt') {
 			fs.rename(files.upload.path, "/tmp/parncutt.abc", function(error) {
 				if (error) {
 					fs.unlink("/tmp/parncutt.abc");
