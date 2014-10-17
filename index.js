@@ -4,8 +4,8 @@ var requestHandlers = require("./requestHandlers");
 
 var handle = {};
 handle["/"] = requestHandlers.home;
+handle["/route_post"] = requestHandlers.route_post;
 handle["/parncutt"] = requestHandlers.parncutt;
 handle["/hart"] = requestHandlers.hart;
-handle["/show"] = requestHandlers.show;
 
 server.start(router.route, handle);
