@@ -91,16 +91,15 @@ function hart(response, request) {
 	py.run('hart.py', options, function (err, results) {
 		console.log("opening hart.py...");
 		if (err) throw err;
-		var r = String(results);
+		console.log("Dave, what is this? " + results[0]);
 		response.writeHead(200, {"Content-Type": "text/html"});
-		response.write(r);
+		response.write("<p>The optimal cost is <strong>" + results[1] + "</strong>.</p>\n");
+		response.write("<p>The optimal fingering is:<br/>\n:");
+		response.write(String(results[2]));
 		response.end();
 	});		
 }
 
-function route(response, request) {
-	
-}
 
 exports.home = home;
 exports.parncutt = parncutt;
