@@ -75,25 +75,25 @@ function hart(response, request) {
 	
 	console.log("Request handler 'hart' was called.");
 	var form = new formidable.IncomingForm();
-	//console.log("about to parse...");
 	form.parse(request, function(error, fields, files) {
-		//console.log("parsing done");
 		fs.rename(files.upload.path, "/tmp/hart.abc", function(error) {
 			if (error) {
 				fs.unlink("/tmp/hart.abc");
 				fs.rename(files.upload.path, "/tmp/hart.abc");
 			}
 		});
-		py.run('hart.py', options, function (err) {
+		py.run('hart.py', options, function (err, results) {
 			console.log("opening hart.py...");
 			if (err) throw err;
-			console.log('finished');
+			var r = String(results);
+			response.writeHead(200, {"Content-Type": "text/html"});
+			response.write(r);
+			response.end();
 		});
 		
-		response.writeHead(200, {"Content-Type": "text/html"});
-		response.end(sys.inspect({fields: fields, files: files}));
+		
+		//response.end(sys.inspect({fields: fields, files: files}));
 		//fs.createReadStream("/tmp/submission.txt").pipe(response);
-		//response.end();
 	});
 	
 }
