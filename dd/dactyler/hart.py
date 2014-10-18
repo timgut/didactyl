@@ -35,6 +35,14 @@ BLACK = 1
 WHITE = 0
 COST_FILE = 'dd/data/tables.dat'
 TEST_CORPUS = "/tmp/%s" % sys.argv[1]
+LOG_FILE_PATH = '/tmp/didactyl.log'
+Log = open(LOG_FILE_PATH, 'a')
+
+def squawk(msg):
+    Log.write(str(msg) + "\n")
+
+def squeak(msg):
+    Log.write(str(msg))
 
 class Interval:
     def __init__(self, l_color, h_color, l_finger, h_finger, s):
@@ -96,8 +104,6 @@ class MyNote:
         prior_note = None
         notes = []
         for n in m21_score[1].getElementsByClass(music21.note.Note):
-            ###print str(n.midi)
-
             new_note = None
 
             if not prior_note:
@@ -206,10 +212,6 @@ for line in f:
             interval = Interval(l_color=l_color, h_color=h_color, l_finger=l_finger, h_finger=h_finger, s=s)
             costs[interval] = int(cost)
 
-for cost in sorted(costs):
-    continue
-    ###print str(cost) + ", cost: " + str(costs[cost])
-
 corp = corpus.Corpus(TEST_CORPUS)
 scores = corp.get_score_list()
 for score in scores:
@@ -233,9 +235,8 @@ for score in scores:
     mth_interval = mth_note.get_semitone_delta()
     for s in range(1, 6):
         if s == 1:
-            continue
-            ###print "Stage {0}: color {1}->{2}, delta {3}".format(m, prior_color, mth_color, mth_interval)
-        ###sys.stdout.write("{0:4d}:".format(s))
+            squawk("Stage {0}: color {1}->{2}, delta {3}".format(m, prior_color, mth_color, mth_interval))
+        squeak("{0:4d}:".format(s))
         for x in range(1, 6):
             interval = None
             if mth_note.is_ascending():
@@ -243,16 +244,12 @@ for score in scores:
             else:
                 interval = Interval(mth_color, prior_color, x, s, mth_interval)
             cost = costs[interval]
-            # print str(interval) + ", cost: {0}".format(cost)
             fsx[m, s, x] = cost
-            ###sys.stdout.write("{0:4d}  ".format(fsx[m, s, x]))
+            squeak("{0:4d}  ".format(fsx[m, s, x]))
 
         for x in range(1, 6):
             if fsx[m, s, x] < fs[m, s]:
                 fs[m, s] = fsx[m, s, x]
-                # print "Lower cost {0}->{1}: {2}".format(s, x, fsx[m, s, x])
-            # else:
-                # print "Higher cost {0}->{1}: {2} over {3}".format(s, x, fsx[m, s, x], fs[m, s])
 
         num_opt[m, s] = 0
         for x in range(1, 6):
@@ -261,13 +258,11 @@ for score in scores:
                 num_opt[m, s] += 1
 
         for x in range(num_opt[m, s]):
-            ###sys.stdout.write(str(xstar[m, s, x]))
+            squeak(str(xstar[m, s, x]))
             if x < num_opt[m, s] - 1:
-                continue
-                ###sys.stdout.write(",")
+                squeak(",")
             else:
-                continue
-                ###print("")
+                squawk("")
 
     # Stages m-1 through 1
     for n in reversed(range(1, m)):
@@ -277,9 +272,8 @@ for score in scores:
         nth_interval = nth_note.get_semitone_delta()
         for s in range(1, 6):
             if s == 1:
-                continue
-                ###print "Stage {0}: color {1}->{2}, delta {3}".format(n, prior_color, nth_color, nth_interval)
-            ###sys.stdout.write("{0:4d}:".format(s))
+                squawk("Stage {0}: color {1}->{2}, delta {3}".format(n, prior_color, nth_color, nth_interval))
+            squeak("{0:4d}:".format(s))
 
             if nth_interval != 0:
                 for x in range(1, 6):
@@ -290,36 +284,29 @@ for score in scores:
                         interval = Interval(nth_color, prior_color, x, s, nth_interval)
                     cost = costs[interval]
                     fsx[n, s, x] = cost + fs[n + 1, x]
-                    ###sys.stdout.write("{0:4d}+{1:d}={2:4d}  ".format(cost, fs[n + 1, x], fsx[n, s, x]))
+                    squeak("{0:4d}+{1:d}={2:4d}  ".format(cost, fs[n + 1, x], fsx[n, s, x]))
 
                 for x in range(1, 6):
                     if fsx[n, s, x] < fs[n, s]:
                         fs[n, s] = fsx[n, s, x]
-                        # print "Lower cost {0}->{1}: {2}".format(s, x, fsx[n, s, x])
-                    # else:
-                        # print "Higher cost {0}->{1}: {2} over {3}".format(s, x, fsx[n, s, x], fs[n, s])
 
                 num_opt[n, s] = 0
                 for x in range(1, 6):
-                    # print "fsx: {0} fs: {1}".format(fsx[n, s, x], fs[n, s])
                     if fsx[n, s, x] == fs[n, s]:
-                        # print "s={0} x={1} is alive".format(s, x)
                         xstar[n, s, num_opt[n, s]] = x
                         num_opt[n, s] += 1
             else:
-                ###print "UNCHARTED WATERS"
+                squawk("UNCHARTED WATERS")
                 for x in range(1, 6):
                     fsx[n, s, x] = fsx[n + 1, s, x]
                     fs[n, s] = fs[n + 1, s]
 
             for x in range(num_opt[n, s]):
-                ###sys.stdout.write(str(xstar[n, s, x]))
+                squeak(str(xstar[n, s, x]))
                 if x < num_opt[n, s] - 1:
-                    continue
-                    ###sys.stdout.write(",")
+                    squeak(",")
                 else:
-                    continue
-                    ###print("")
+                    squeak("\n")
 
     fingers = [0]
     for s in range(1, 6):
@@ -329,9 +316,9 @@ for score in scores:
     for n in range(1, m + 1):
         fingers.append(xstar[n, fingers[n - 1], 0])
 
-    #print "The optimal cost is {0}".format(opt_cost)
-    #print "Here is an optimal fingering:"
-    #print fingers
+    squawk("The optimal cost is {0}".format(opt_cost))
+    squawk("Here is an optimal fingering:")
+    squawk(fingers)
     
     print format(opt_cost)
     print fingers

@@ -1,0 +1,226 @@
+X:1T:arpeggios_common_c_majorC:Beringer and DunhillM:3/4K:CmajL:1/16CEGc egc'g ecGE:|C4|:EGce gc'e'c' gecG:|E4|:Gceg c'e'g'e' c'gec:|G4||X:2T:arpeggios_common_c_minorC:Beringer and DunhillM:3/4K:CminL:1/16CEGc egc'g ecGE:|C4|:EGce gc'e'c' gecG:|E4|:Gceg c'e'g'e' c'gec:|G4||X:3
+T:arpeggios_common_g_major
+C:Beringer and Dunhill
+M:3/4
+K:Gmaj
+L:1/16
+G,B,DG Bdgd BGDB,:|G,4|:B,DGB dgbg dBGD:|B,4|:DGBd gbd'b gdBG:|D4||X:4T:arpeggios_common_g_minorC:Beringer and DunhillM:3/4K:GminL:1/16G,B,DG Bdgd BGDB,:|G,4|:B,DGB dgbg dBGD:|B,4|:DGBd gbd'b gdBG:|D4||X:5
+T:arpeggios_common_d_major
+C:Beringer and Dunhill
+M:3/4
+K:Dmaj
+L:1/16
+DFAd fad'a fdAF:|D4|:FAdf ad'f'd' afdA:|F4|:Adfa d'f'a'f' d'afd:|A4||X:6T:arpeggios_common_d_minorC:Beringer and DunhillM:3/4K:DminL:1/16DFAd fad'a fdAF:|D4|:FAdf ad'f'd' afdA:|F4|:Adfa d'f'a'f' d'afd:|A4||X:7
+T:arpeggios_common_a_major
+C:Beringer and Dunhill
+M:3/4
+K:Amaj
+L:1/16
+A,CEA ceae cAEC:|A,4|:CEAc eac'a ecAE:|C4|:EAce ac'e'c' aecA:|E4||X:8T:arpeggios_common_a_minorC:Beringer and DunhillM:3/4K:AminL:1/16A,CEA ceae cAEC:|A,4|:CEAc eac'a ecAE:|C4|:EAce ac'e'c' aecA:|E4||X:9
+T:arpeggios_common_e_major
+C:Beringer and Dunhill
+M:3/4
+K:Emaj
+L:1/16
+EGBe gbe'b geBG:|E4|:GBeg be'g'e' bgeB:|G4|:Begb e'g'b'g' e'bge:|B4||X:10T:arpeggios_common_e_minorC:Beringer and DunhillM:3/4K:EminL:1/16EGBe gbe'b geBG:|E4|:GBeg be'g'e' bgeB:|G4|:Begb e'g'b'g' e'bge:|B4||X:11
+T:arpeggios_common_b_major
+C:Beringer and Dunhill
+M:3/4
+K:Bmaj
+L:1/16
+B,DFB dfbf dBFD:|B,4|:DFBd fbd'b fdBF:|D4|:FBdf bd'f'd' bfdB:|F4||X:12T:arpeggios_common_b_minorC:Beringer and DunhillM:3/4K:BminL:1/16B,DFB dfbf dBFD:|B,4|:DFBd fbd'b fdBF:|D4|:FBdf bd'f'd' bfdB:|F4||X:13
+T:arpeggios_common_fsharp_major
+C:Beringer and Dunhill
+M:3/4
+K:F#maj
+L:1/16
+F,A,CF Acfc AFCA,:|F,4|:A,CFA cfaf cAFC:|A,4|:CFAc fac'a fcAF:|C4||X:14T:arpeggios_common_fsharp_minorC:Beringer and DunhillM:3/4K:F#minL:1/16F,A,CF Acfc AFCA,:|F,4|:A,CFA cfaf cAFC:|A,4|:CFAc fac'a fcAF:|C4||X:15
+T:arpeggios_common_dflat_major
+C:Beringer and Dunhill
+M:3/4
+K:Dbmaj
+L:1/16
+DFAd fad'a fdAF:|D4|:FAdf ad'f'd' afdA:|F4|:Adfa d'f'a'f' d'afd:|A4||X:16
+T:arpeggios_common_csharp_minor
+C:Beringer and Dunhill
+M:3/4
+K:C#min
+L:1/16
+CEGc egc'g ecGE:|C4|:EGce gc'e'c' gecG:|E4|:Gceg c'e'g'e' c'gec:|G4||X:17
+T:arpeggios_common_aflat_major
+C:Beringer and Dunhill
+M:3/4
+K:Abmaj
+L:1/16
+A,CEA ceae cAEC:|A,4|:CEAc eac'a ecAE:|C4|:EAce ac'e'c' aecA:|E4||X:18
+T:arpeggios_common_gsharp_minor
+C:Beringer and Dunhill
+M:3/4
+K:G#min
+L:1/16
+G,B,DG Bdgd BGDB,:|G,4|:B,DGB dgbg dBGD:|B,4|:DGBd gbd'b gdBG:|D4||X:19
+T:arpeggios_common_eflat_major
+C:Beringer and Dunhill
+M:3/4
+K:Ebmaj
+L:1/16
+EGBe gbe'b geBG:|E4|:GBeg be'g'e' bgeB:|G4|:Begb e'g'b'g' e'bge:|B4||X:20T:arpeggios_common_eflat_minorC:Beringer and DunhillM:3/4K:EbminL:1/16EGBe gbe'b geBG:|E4|:GBeg be'g'e' bgeB:|G4|:Begb e'g'b'g' e'bge:|B4||X:21
+T:arpeggios_common_bflat_major
+C:Beringer and Dunhill
+M:3/4
+K:Bbmaj
+L:1/16
+B,DFB dfbf dBFD:|B,4|:DFBd fbd'b fdBF:|D4|:FBdf bd'f'd' bfdB:|F4||X:22T:arpeggios_common_bflat_minorC:Beringer and DunhillM:3/4K:BbminL:1/16B,DFB dfbf dBFD:|B,4|:DFBd fbd'b fdBF:|D4|:FBdf bd'f'd' bfdB:|F4||X:23
+T:arpeggios_common_f_major
+C:Beringer and Dunhill
+M:3/4
+K:Fmaj
+L:1/16
+F,A,CF Acfc AFCA,:|F,4|:A,CFA cfaf cAFC:|A,4|:CFAc fac'a fcAF:|C4||X:24T:arpeggios_common_f_minorC:Beringer and DunhillM:3/4K:FminL:1/16F,A,CF Acfc AFCA,:|F,4|:A,CFA cfaf cAFC:|A,4|:CFAc fac'a fcAF:|C4||X:25T:arpeggios_dom7_cC:Beringer and DunhillM:4/4K:CmajL:1/16G,B,DF GBdf gfdB GFDB,:|G,4|:B,DFG Bdfg bgfd BGFD:|B,4||:DFGB dfgb d'bgf dBGF:|D4|:FGBd fgbd' f'd'bg fdBG:|F4||X:26
+T:arpeggios_dom7_g
+C:Beringer and Dunhill
+M:4/4
+K:Gmaj
+L:1/16
+DFAc dfac' d'c'af dcAF:|D4|:FAcd fac'd' f'd'c'a fdcA:|F4|
+|:Acdf ac'd'f' a'f'd'c' afdc:|A4|:cdfa c'd'f'a' c''a'f'd' c'afd:|c4||X:27
+T:arpeggios_dom7_d
+C:Beringer and Dunhill
+M:4/4
+K:Dmaj
+L:1/16
+A,CEG Aceg agec AGEC:|A,4|:CEGA cega c'age cAGE:|C4|
+|:EGAc egac' e'c'ag ecAG:|E4|:GAce gac'e' g'e'c'a gecA:|G4||X:28
+T:arpeggios_dom7_a
+C:Beringer and Dunhill
+M:4/4
+K:Amaj
+L:1/16
+EGBd egbd' e'd'bg edBG:|E4|:GBde gbd'e' g'e'd'b gedB:|G4|
+|:Bdeg bd'e'g' b'g'e'd' bged:|B4|:degb d'e'g'b' d''b'g'e' d'bge:|d4||X:29
+T:arpeggios_dom7_e
+C:Beringer and Dunhill
+M:4/4
+K:Emaj
+L:1/16
+B,DFA Bdfa bafd BAFD:|B,4|:DFAB dfab d'baf dBAF:|D4|
+|:FABd fabd' f'd'ba fdBA:|F4|:ABdf abd'f' a'f'd'b afdB:|A4||X:30
+T:arpeggios_dom7_b
+C:Beringer and Dunhill
+M:4/4
+K:Bmaj
+L:1/16
+FAce fac'e' f'e'c'a fecA:|F4|:Acef ac'e'f' a'f'e'c' afec:|A4|
+|:cefa c'e'f'a' c''a'f'e' c'afe:|c4|:efac' e'f'a'c'' e''c''a'f' e'c'af:|e4||X:31
+T:arpeggios_dom7_fsharp
+C:Beringer and Dunhill
+M:4/4
+K:F#maj
+L:1/16
+CEGB cegb c'bge cBGE:|C4|:EGBc egbc' e'c'bg ecBG:|E4|
+|:GBce gbc'e' g'e'c'b gecB:|G4|:Bceg bc'e'g' b'g'e'c' bgec:|B4||X:32
+T:arpeggios_dom7_dflat
+C:Beringer and Dunhill
+M:4/4
+K:Dbmaj
+L:1/16
+A,CEG Aceg agec AGEC:|A,4|:CEGA cega c'age cAGE:|C4|
+|:EGAc egac' e'c'ag ecAG:|E4|:GAce gac'e' g'e'c'a gecA:|G4||X:33
+T:arpeggios_dom7_aflat
+C:Beringer and Dunhill
+M:4/4
+K:Abmaj
+L:1/16
+EGBd egbd' e'd'bg edBG:|E4|:GBde gbd'e' g'e'd'b gedB:|G4|
+|:Bdeg bd'e'g' b'g'e'd' bged:|B4|:degb d'e'g'b' d''b'g'e' d'bge:|d4||X:34
+T:arpeggios_dom7_eflat
+C:Beringer and Dunhill
+M:4/4
+K:Ebmaj
+L:1/16
+B,DFA Bdfa bafd BAFD:|B,4|:DFAB dfab d'baf dBAF:|D4|
+|:FABd fabd' f'd'ba fdBA:|F4|:ABdf abd'f' a'f'd'b afdB:|A4||X:35
+T:arpeggios_dom7_bflat
+C:Beringer and Dunhill
+M:4/4
+K:Bbmaj
+L:1/16
+F,A,CE FAce fecA FECA,:|F,4|:A,CEF Acef afec AFEC:|A,4|
+|:CEFA cefa c'afe cAFE:|C4|:EFAc efac' e'c'af ecAF:|E4||X:36
+T:arpeggios_dom7_f
+C:Beringer and Dunhill
+M:4/4
+K:Fmaj
+L:1/16
+CEGB cegb c'bge cBGE:|C4|:EGBc egbc' e'c'bg ecBG:|E4|
+|:GBce gbc'e' g'e'c'b gecB:|G4|:Bceg bc'e'g' b'g'e'c' bgec:|B4||X:37T:arpeggios_dim7_cC:Beringer and DunhillM:4/4K:CmajL:1/16B,DF_A Bdf_a bafd BAFD:|B,4|:DF_AB df_ab d'baf dBAF:|D4||:F_ABd f_abd' f'd'ba fdBA:|F4|:_ABdf _abd'f' _a'f'd'b afdB:|_A4||X:38
+T:arpeggios_dim7_g
+C:Beringer and Dunhill
+M:4/4
+K:Gmaj treble
+L:1/16
+FAc_e fac'_e' f'e'c'a fecA:|F4|:A,C_EF Ac_ef afec AFEC:|A,4|
+|:C_EFA c_efa c'afe cAFE:|C4|:_EFAc _efac' _e'c'af ecAF:|_E4||X:39
+T:arpeggios_dim7_d
+C:Beringer and Dunhill
+M:4/4
+K:Dmaj treble
+L:1/16
+CEG_B ceg_b c'bge cBGE:|C4|:EG_Bc eg_bc' e'c'bg ecBG:|E4|
+|:G,_B,CE G_Bce gecB GECB,:|G,4|:_B,CEG _Bceg _bgec BGEC:|_B,4||X:40
+T:arpeggios_dim7_a
+C:Beringer and Dunhill
+M:4/4
+K:Amaj clef=treble octave=0
+L:1/16
+G,B,D=F GBd=f gfdB GFDB,:|G,4|:B,D=FG Bd=fg bgfd BGFD:|B,4|
+|:D=FGB d=fgb d'bgf dBGF:|D4|:=FGBd =fgbd' =f'd'bg fdBG:|=F4||X:41
+T:arpeggios_dim7_e
+C:Beringer and Dunhill
+M:4/4
+K:Emaj clef=treble octave=0
+L:1/16
+DFA=c dfa=c' d'c'af dcAF:|D4|:FA=cd fa=c'd' f'd'c'a fdcA:|F4|
+|:A,=CDF A=cdf afdc AFDC:|A,4|:=CDFA =cdfa =c'afd cAFD:|=C4||X:42
+T:arpeggios_dim7_b
+C:Beringer and Dunhill
+M:4/4
+K:Bmaj clef=treble octave=0
+L:1/16
+A,CE=G Ace=g agec AGEC:|A,4|:CE=GA ce=ga c'age cAGE:|C4|
+|:E=GAc e=gac' e'c'ag ecAG:|E4|:=GAce =gac'e' =g'e'c'a gecA:|=G4||X:43
+T:arpeggios_dim7_fsharp
+C:Beringer and Dunhill
+M:4/4
+K:F#maj clef=treble octave=0
+L:1/16
+EGB=d egb=d' e'd'bg edBG:|E4|:GB=de gb=d'e' g'e'd'b gedB:|G4|
+|:B,=DEG B=deg bged BGED:|B,4|:=DEGB =degb =d'bge dBGE:|=D4||X:44
+T:arpeggios_dim7_dflat
+C:Beringer and Dunhill
+M:4/4
+K:Dbmaj clef=treble octave=0
+L:1/16
+CEG__B ceg__b c'bge cBGE:|C4|:EG__Bc eg__bc' e'c'bg ecBG:|E4|
+|:G__Bce g__bc'e' g'e'c'b gecB:|G4|:__Bceg __bc'e'g' __b'g'e'c' bgec:|__B4||X:45T:arpeggios_dim7_aflatC:Beringer and DunhillM:4/4K:Abmaj clef=treble octave=0L:1/16G,B,D_F GBd_f gfdB GFDB,:|G,4|:B,D_FG Bd_fg bgfd BGFD:|B,4||:D_FGB d_fgb d'bgf dBGF:|D4|:_FGBd _fgbd' _f'd'bg fdBG:|_F4||X:46
+T:arpeggios_dim7_eflat
+C:Beringer and Dunhill
+M:4/4
+K:Ebmaj clef=treble octave=0
+L:1/16
+DFA_c dfa_c' d'c'af dcAF:|D4|:FA_cd fa_c'd' f'd'c'a fdcA:|F4|
+|:A,_CDF A_cdf afdc AFDC:|A,4|:_CDFA _cdfa _c'afd cAFD:|_C4||X:47
+T:arpeggios_dim7_bflat
+C:Beringer and Dunhill
+M:4/4
+K:Bbmaj clef=treble octave=0
+L:1/16
+A,CE_G Ace_g agec AGEC:|A,4|:CE_GA ce_ga c'age cAGE:|C4|
+|:E_GAc e_gac' e'c'ag ecAG:|E4|:_GAce _gac'e' _g'e'c'a gecA:|_G4||X:48
+T:arpeggios_dim7_f
+C:Beringer and Dunhill
+M:4/4
+K:Fmaj clef=treble octave=0
+L:1/16
+EGB_d egb_d' e'd'bg edBG:|E4|:GB_de gb_d'e' g'e'd'b gedB:|G4|
+|:B,_DEG B_deg bged BGED:|B,4|:_DEGB _degb _d'bge dBGE:|_D4||

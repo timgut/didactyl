@@ -1,0 +1,31 @@
+diatonic:c_major:similar_motion:octave
+1231 2341 x31x xx5x xx13 x14x x13x:1
+1231 2341 5315 5555 5513 5145 5135:1
+@ The gaps are all puzzling, so I just stuck 5's in there.
+
+diatonic:c_major:similar_motion:thirds
+3123 4123 1xx4 1x3x 14xx 13x1 4xx1:3
+3123 4123 1554 1535 1455 1351 4551:3
+@ The gaps are all puzzling, so again give the pinky a workout.
+
+# We skip "In Sixths" and "Contrary Motion" as these are the same
+# as above.
+
+diatonic:c_minor_melodic:similar_motion:thirds
+1231 2341 x31x xx5x xx13 x14x x13x:1
+1231 2341 1311 1151 1113 1141 1131:1
+@ Thumb got bored, so I gave him some more work
+@ to do.
+
+.
+.
+.
+
+broken_chords:c_minor
+ 1235 1245 1235 1235 5321 5321 5421 5321
+ 1235 1245 1235 1235 5321 5321 5421 5321
+a1235 2124 1235 1235 5321 5321 4212 5321
+a1235 2124 1235 1235 5321 5321 4212 5321
+
+
+
