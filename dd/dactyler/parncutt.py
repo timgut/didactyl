@@ -25,11 +25,9 @@ __author__ = 'David Randolph'
 # OTHER DEALINGS IN THE SOFTWARE.
 
 import music21
-#import YenKSP
 import util
 import corpus
 from node import GraphNode
-#import YenKSP.algorithms
 import networkx as nx
 import copy
 import matplotlib.pyplot as plt
@@ -38,8 +36,8 @@ import pprint
 import time
 import re
 
-TEST_CORPUS = '/Users/timgut/Projects/node.js/node-web-service/dd/corpora/parncutt.abc'
-#TEST_CORPUS = '/Users/w17626/dd/corpora/small.abc'
+#TEST_CORPUS = '/Users/timgut/Projects/node.js/node-web-service/dd/corpora/parncutt.abc'
+TEST_CORPUS = '/Users/w17626/dd/corpora/small.abc'
 THUMB = 1
 INDEX = 2
 MIDDLE = 3
@@ -74,18 +72,22 @@ finger_span = {
     (3, 4): {'MinPrac': 1, 'MinComf': 1, 'MinRel': 1, 'MaxRel': 2, 'MaxComf': 2, 'MaxPrac': 4},
     (3, 5): {'MinPrac': 1, 'MinComf': 1, 'MinRel': 3, 'MaxRel': 4, 'MaxComf': 5, 'MaxPrac': 7},
     (4, 5): {'MinPrac': 1, 'MinComf': 1, 'MinRel': 1, 'MaxRel': 2, 'MaxComf': 3, 'MaxPrac': 5},
-    (2, 1): {'MinPrac': -5, 'MinComf': -8, 'MinRel': -10, 'MaxRel': 5, 'MaxComf': 3, 'MaxPrac': -1},
-    (3, 1): {'MinPrac': -7, 'MinComf': -10, 'MinRel': -12, 'MaxRel': 4, 'MaxComf': 2, 'MaxPrac': -4},
-    (4, 1): {'MinPrac': -9, 'MinComf': -12, 'MinRel': -14, 'MaxRel': 3, 'MaxComf': 1, 'MaxPrac': -5},
-    (5, 1): {'MinPrac': -10, 'MinComf': -13, 'MinRel': -15, 'MaxRel': 1, 'MaxComf': -1, 'MaxPrac': -7},
-    (3, 2): {'MinPrac': -2, 'MinComf': -3, 'MinRel': -5, 'MaxRel': -1, 'MaxComf': -1, 'MaxPrac': -1},
-    (4, 2): {'MinPrac': -4, 'MinComf': -5, 'MinRel': -7, 'MaxRel': -1, 'MaxComf': -1, 'MaxPrac': -3},
-    (5, 2): {'MinPrac': -6, 'MinComf': -8, 'MinRel': -10, 'MaxRel': 2, 'MaxComf': -2, 'MaxPrac': -5},
-    (4, 3): {'MinPrac': -2, 'MinComf': -2, 'MinRel': -4, 'MaxRel': -1, 'MaxComf': -1, 'MaxPrac': -1},
-    (5, 3): {'MinPrac': -4, 'MinComf': -5, 'MinRel': -7, 'MaxRel': -1, 'MaxComf': -1, 'MaxPrac': -3},
-    (5, 4): {'MinPrac': -2, 'MinComf': -3, 'MinRel': -5, 'MaxRel': -1, 'MaxComf': -1, 'MaxPrac': -1},
+    (2, 1): {'MinPrac': -10, 'MinComf': -8, 'MinRel': -5, 'MaxRel': -1, 'MaxComf': 3, 'MaxPrac': 5},
+    (3, 1): {'MinPrac': -12, 'MinComf': -10, 'MinRel': -7, 'MaxRel': -3, 'MaxComf': 2, 'MaxPrac': 4},
+    (4, 1): {'MinPrac': -14, 'MinComf': -12, 'MinRel': -9, 'MaxRel': -5, 'MaxComf': 1, 'MaxPrac': 3},
+    (5, 1): {'MinPrac': -15, 'MinComf': -13, 'MinRel': -10, 'MaxRel': -7, 'MaxComf': -1, 'MaxPrac': 1},
+    (3, 2): {'MinPrac': -5, 'MinComf': -3, 'MinRel': -2, 'MaxRel': -1, 'MaxComf': -1, 'MaxPrac': -1},
+    (4, 2): {'MinPrac': -7, 'MinComf': -5, 'MinRel': -4, 'MaxRel': -3, 'MaxComf': -1, 'MaxPrac': -1},
+    (5, 2): {'MinPrac': -10, 'MinComf': -8, 'MinRel': -6, 'MaxRel': -5, 'MaxComf': -2, 'MaxPrac': -2},
+    (4, 3): {'MinPrac': -4, 'MinComf': -2, 'MinRel': -2, 'MaxRel': -1, 'MaxComf': -1, 'MaxPrac': -1},
+    (5, 3): {'MinPrac': -7, 'MinComf': -5, 'MinRel': -4, 'MaxRel': -3, 'MaxComf': -1, 'MaxPrac': -1},
+    (5, 4): {'MinPrac': -5, 'MinComf': -3, 'MinRel': -2, 'MaxRel': -1, 'MaxComf': -1, 'MaxPrac': -1},
+    #(1, 1): {'MinPrac': 0, 'MinComf': 0, 'MinRel': 0, 'MaxRel': 0, 'MaxComf': 0, 'MaxPrac': 0},
+    #(2, 2): {'MinPrac': 0, 'MinComf': 0, 'MinRel': 0, 'MaxRel': 0, 'MaxComf': 0, 'MaxPrac': 0},
+    #(3, 3): {'MinPrac': 0, 'MinComf': 0, 'MinRel': 0, 'MaxRel': 0, 'MaxComf': 0, 'MaxPrac': 0},
+    #(4, 4): {'MinPrac': 0, 'MinComf': 0, 'MinRel': 0, 'MaxRel': 0, 'MaxComf': 0, 'MaxPrac': 0},
+    #(5, 5): {'MinPrac': 0, 'MinComf': 0, 'MinRel': 0, 'MaxRel': 0, 'MaxComf': 0, 'MaxPrac': 0}
 }
-
 
 class FingeredNote:
     def __init__(self, m21note=None, finger=None):
