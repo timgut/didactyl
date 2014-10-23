@@ -24,6 +24,8 @@ __author__ = 'David Randolph'
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 # OTHER DEALINGS IN THE SOFTWARE.
 import pprint
+import json
+import StringIO
 import sys
 import numpy
 import re
@@ -214,6 +216,7 @@ for line in f:
 
 corp = corpus.Corpus(TEST_CORPUS)
 scores = corp.get_score_list()
+
 for score in scores:
     opt_cost = BIG_NUM
     note_list = MyNote.get_note_list(score)
@@ -320,6 +323,14 @@ for score in scores:
     squawk("Here is an optimal fingering:")
     squawk(fingers)
     
-    print format(opt_cost)
-    print fingers
+    #print format(opt_cost)
+    #print fingers
+
+    title = "Hard-Coded Blah Blah Blah"
+
+    print '{ "title" : "' + title + '", "optimal_fingering": "' + str(fingers) + '" }'
+
+
+
+
 

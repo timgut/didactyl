@@ -25,23 +25,30 @@ __author__ = 'David Randolph'
 # OTHER DEALINGS IN THE SOFTWARE.
 
 import music21
+import StringIO
 
 class Corpus:
     def __init__(self, corpus_path):
         self.corp = music21.converter.parse(corpus_path)
 
+    def get_title(self):
+        if isinstance(self.corp, music21.stream.Opus):
+            score = self.corp
+            meta = score[0]
+            return format(meta.title)
+    
     def get_score_list(self):
         scores = []
         if isinstance(self.corp, music21.stream.Opus):
             for score in self.corp:
                 meta = score[0]
-                print "Title: " + meta.title
+                self.title.write(meta.title)
                 scores.append(score)
         else:
             score = self.corp
             scores.append(score)
             meta = score[0]
-            print "Title: {0}".format(meta.title)
+            #print "Title: {0}".format(meta.title)
 
         return scores
 
