@@ -326,7 +326,7 @@ for score in scores:
     #print format(opt_cost)
     #print fingers
 
-    title = "Hard-Coded Blah Blah Blah"
+    title = scores[0][0].title
 
     print '{ "title" : "' + title + '", "optimal_fingering": "' + str(fingers) + '" }'
 
