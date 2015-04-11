@@ -1,7 +1,5 @@
 __author__ = 'David Randolph'
-# Copyright (c) 2014 Tuning Bell Studios LLC
-#
-# Written by David A. Randolph.
+# Copyright (c) 2014-2015 David A. Randolph.
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation

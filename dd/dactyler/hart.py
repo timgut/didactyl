@@ -1,7 +1,5 @@
 __author__ = 'David Randolph'
-# Copyright (c) 2014 Tuning Bell Studios LLC
-#
-# Written by David A. Randolph.
+# Copyright (c) 2014 David A. Randolph.
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation
@@ -35,8 +33,10 @@ BIG_NUM = 999
 MAX_INTERVAL_SIZE = 12
 BLACK = 1
 WHITE = 0
-COST_FILE = 'dd/data/tables.dat'
-TEST_CORPUS = "/tmp/%s" % sys.argv[1]
+# COST_FILE = 'dd/data/tables.dat'
+COST_FILE = '/Users/w17626/dd/data/tables.dat'
+# TEST_CORPUS = "/tmp/%s" % sys.argv[1]
+TEST_CORPUS = "/Users/w17626/tb2/node-web-service/dd/corpora/beringer/broken_chords.abc"
 LOG_FILE_PATH = '/tmp/didactyl.log'
 Log = open(LOG_FILE_PATH, 'a')
 

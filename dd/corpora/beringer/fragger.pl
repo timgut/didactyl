@@ -68,21 +68,7 @@ foreach my $scale (sort keys %blanks)
         $char_count++ if $a_char ne 'x';;
 	$x_count++ if $blank_char eq 'x' and $a_char ne 'x';
 	$char_match_count++ if $l_char eq $a_char and $a_char ne 'x';
-        if ($blank_char eq 'x')
-        {
-            if ($l_char eq $a_char)
-            {
-	        $x_match_count++;
-            }
-            elsif ($a_char ne 'x')
-            {
-	        print "X MISMATCH in $scale at position $i.\n";
-	        print "L: $l_char A: $a_char B: $blank_char\n";
-	        print "B: $blank_line\n";
-	        print "L: $l_line\n";
-	        print "A: $a_line\n";
-            }
-        }
+	$x_match_count++ if $blank_char eq 'x' and $l_char eq $a_char;
 	if ($blank_char ne 'x' and $l_char ne $a_char)
 	{
 	    print "Transcription ERROR in $scale at position $i.\n";

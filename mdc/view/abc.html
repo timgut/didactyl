@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>MDC demo</title>
+    <textarea id="shorty" style="display:none;">
+    X:1
+    T:Invention Nr. 1
+    T:J. S. Bach
+    T:BWV 772
+    %%score { 1 | 2 }
+    L:1/16
+    M:2/4
+    K:C
+    V:1 treble nm="Piano" snm="Pno."
+    V:2 bass
+    V:1
+    z CDE {def}[F D E C]2 [fdec][fdc] | G2c2 B2c2 | dGAB cABG | d2g2 f2g2 | eagf egfa | %5
+    V:2
+    z8 | z C,D,E, F,D,E,C, | G,2G,,2 z4 | z G,A,B, CA,B,G, | C2B,2 C2D2 | %5
+    </textarea>
+    <textarea id="invention1" style="display:none;">
+    X:1
+    T:Invention Nr. 1
+    T:J. S. Bach
+    T:BWV 772
+    %%score { 1 | 2 }
+    L:1/16
+    M:2/4
+    K:C
+    V:1 treble nm="Piano" snm="Pno."
+    V:2 bass
+    V:1
+    z CDE FDEC | G2c2 B2c2 | dGAB cABG | d2g2 f2g2 | eagf egfa | %5
+    gfed cedf | edcB AcBd | cBAG ^FAGB | A2D2 c2>d2 | BAG^F EGFA | %10
+    GBAc Bdce | dB/c/dg B2AG | G2 z2 z4 | z GAB cABG | ^F2 z2 z4 | %15
+    z ABc dBcA | B2 z2 z4 | z dcB AcBd | c2 z2 z4 | z edc Bd^ce | %20
+    d2^c2 d2e2 | f2A2 B2^c2 | d2^F2 ^G2A2 | B2c2 d4- | dE^F^G AFGE | %25
+    edce dcBd | ca^gb aefd | _Afed c2B=A | Aagf egfa | g8- | %30
+    gefg afge | f8- | fgfe dfeg | f8- | fdef gefd | %35
+    e8- | ecde fdec | defg afge | fgab c'abg | c'2g2 e2dc | %40
+    c_BAG FAGB | ABcE DcFB | [EGc]16 |] %43
+    V:2
+    z8 | z C,D,E, F,D,E,C, | G,2G,,2 z4 | z G,A,B, CA,B,G, | C2B,2 C2D2 | %5
+    E2G,2 A,2B,2 | C2E,2 ^F,2G,2 | A,2B,2 C4- | CD,E,^F, G,E,F,D, | G,2B,,2 C,2D,2 | %10
+    E,2^F,2 G,2E,2 | B,,2>C,2 D,2D,,2 | z G,,A,,B,, C,A,,B,,G,, | D,2G,2 ^F,2G,2 | A,D,E,^F, G,E,F,D, | %15
+    A,2D2 C2D2 | G,GFE DFEG | F2E2 F2D2 | EAGF EGFA | G2F2 G2E2 | %20
+    F_BAG FAGB | AGFE DFEG | FEDC B,DCE | DCB,A, ^G,B,A,C | B,2E,2 D2>E2 | %25
+    CB,A,G, ^F,A,^G,B, | A,CB,D CEDF | E2A,2 E2E,2 | A,2A,,2 z4 | z EDC B,D^CE | %30
+    D8- | DA,B,C DB,CA, | B,8- | B,DCB, A,CB,D | C8- | %35
+    CG,A,_B, CA,B,G, | A,2_B,2 A,2G,2 | F,2D2 C2_B,2 | A,2F2 E2D2 | ED,E,F, G,E,F,D, | %40
+    E,2C,2 D,2E,2 | F,D,E,F, G,2G,,2 | C,,16 |] %43
+    </textarea>
+    <!--
+    <script src="../lib/abcjs_basic_1.13-min.js" type="text/javascript"></script>
+    -->
+    <script src="https://0b0f039ba2113bf1c6de76d7ee52555275b0fb18.googledrive.com/host/0B3BgE7P6T9GOd2dEQV9sM2pTTWc/abcjs_basic_1.12-min.js" type="text/javascript"></script>
+    <script src="../lib/mdc.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            var abc_content = document.getElementById('shorty').value;
+            load_collector(abc_content, {note:'above', staff:'grand'});
+            // load_collector(abc_content, {note:'finger', staff:'split'});
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
